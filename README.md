@@ -8,9 +8,7 @@ Projeto para auxiliar na padronização de retornos de controllers
 
 ## Documentação
 
-[Conexão](./docs/connect.md)
-[Repositório](./docs/repository.md)
-[Transação](./docs/transaction.md)
+[Response](./docs/response.md)
 
 ## 🚀 Sobre mim
 
