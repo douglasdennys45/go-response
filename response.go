@@ -5,10 +5,10 @@ import (
 )
 
 type ResponseInterface interface {
-	Response() response
+	Response() Response
 }
 
-type response struct {
+type Response struct {
 	Data      interface{} `json:"data,omitempty"`
 	RequestId string      `json:"requestId,omitempty"`
 	Message   string      `json:"message,omitempty"`
@@ -19,11 +19,11 @@ type response struct {
 }
 
 func NewResponse(Data interface{}, RequestId string, Message string, Status int, Error string, Path string, Timestamp time.Time) ResponseInterface {
-	return &response{Data, RequestId, Message, Status, Error, Path, Timestamp}
+	return &Response{Data, RequestId, Message, Status, Error, Path, Timestamp}
 }
 
-func (r *response) Response() response {
-	return response{
+func (r *Response) Response() Response {
+	return Response{
 		Data:      r.Data,
 		RequestId: r.RequestId,
 		Message:   r.Message,
