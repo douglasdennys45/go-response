@@ -15,11 +15,11 @@ type Response struct {
 	Status    int         `json:"status,omitempty"`
 	Error     string      `json:"error,omitempty"`
 	Path      string      `json:"path,omitempty"`
-	Timestamp time.Time   `json:"timestamp,omitempty"`
+	Timestamp time.Time   `json:"timestamp"`
 }
 
-func NewResponse(Data interface{}, RequestId string, Message string, Status int, Error string, Path string, Timestamp time.Time) ResponseInterface {
-	return &Response{Data, RequestId, Message, Status, Error, Path, Timestamp}
+func NewResponse(Data interface{}, RequestId string, Message string, Status int, Error string, Path string) ResponseInterface {
+	return &Response{Data, RequestId, Message, Status, Error, Path, time.Now()}
 }
 
 func (r *Response) Response() Response {
