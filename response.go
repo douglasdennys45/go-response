@@ -1,4 +1,4 @@
-package gopostgres
+package goresponse
 
 import (
 	"time"
